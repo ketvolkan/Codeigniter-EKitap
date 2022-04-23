@@ -6,10 +6,16 @@ class Ekitap extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model("book_model");
     }
 
     public function index()
     {
-        $this->load->view('ekitap');
+        //print_r($this->book_model->getAll());
+        $books = $this->book_model->getAll();
+        $viewData = [
+            "books" => $books
+        ];
+        $this->load->view('ekitap', $viewData);
     }
 }
