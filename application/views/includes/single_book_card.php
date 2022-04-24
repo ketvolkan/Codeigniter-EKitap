@@ -9,7 +9,7 @@
                     <h6 class="l-through">$210.00</h6>
                 </div>
                 <div class="prd-bottom">
-                    <a href="" class="social-info" style="width: 120px;">
+                    <a href="<?php echo base_url("/BookDetail?id=1") ?>" class="social-info" style="width: 120px;">
                         <span class="ti-move"></span>
                         <p class="hover-text">Devamını Gör</p>
                     </a>
