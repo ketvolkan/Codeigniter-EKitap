@@ -10,6 +10,7 @@ class Login extends CI_Controller
     }
     public function index()
     {
+
         $this->load->view('login');
     }
     public function checkUser()
@@ -19,13 +20,18 @@ class Login extends CI_Controller
         $user = $this->user_model->getByEmailAndPassword($email, $password);
         if ($user[0] != null) {
             $this->session->set_userdata("userId", $user[0]->id);
-            $this->session->set_userdata("userFirstName", $user[0]->name);
-            $this->session->set_userdata("userLastName", $user[0]->surname);
+            $this->session->set_userdata("userFirstName", $user[0]->firstName);
+            $this->session->set_userdata("userLastName", $user[0]->lastName);
             $this->session->set_userdata("userEmail", $user[0]->email);
             $this->session->set_userdata("userPassword", $user[0]->password);
             redirect(base_url("/Ekitap"));
         } else {
             redirect(base_url("/Login?status=false"));
         }
+    }
+    public function LogOut()
+    {
+        $this->session->sess_destroy();
+        redirect(base_url("/"));
     }
 }

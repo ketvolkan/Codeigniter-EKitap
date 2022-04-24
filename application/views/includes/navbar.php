@@ -13,13 +13,29 @@
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item "><a class="nav-link" href="<?php echo base_url("/Ekitap") ?>">Anasayfa</a></li>
 
-                        <li class="nav-item submenu dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giriş/Kayıt</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url("/Login") ?>">Giriş Yap</a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url("/Register") ?>">Kayıt Ol</a></li>
-                            </ul>
-                        </li>
+                        <?php
+                        if ($this->session->userdata("userId") == null) {
+                        ?>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giriş/Kayıt</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("/Login") ?>">Giriş Yap</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("/Register") ?>">Kayıt Ol</a></li>
+                                </ul>
+                            </li>
+                        <?php
+                        } else {
+                        ?>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->userdata("userFirstName") . " " . $this->session->userdata("userLastName"); ?></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><span class="nav-link"><?php echo $this->session->userdata("userEmail"); ?></span></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("/Login/logOut") ?>">Çıkış Yap</a></li>
+                                </ul>
+                            </li>
+                        <?php
+                        }
+                        ?>
                     </ul>
 
                 </div>

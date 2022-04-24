@@ -11,7 +11,9 @@ class Ekitap extends CI_Controller
 
     public function index()
     {
+        // echo "<pre>";
         //print_r($this->book_model->getAll());
+        //echo "</pre>";
         //$books = $this->book_model->getAll();
         $viewData = [
             //"books" => $books

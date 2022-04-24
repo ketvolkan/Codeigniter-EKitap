@@ -12,4 +12,19 @@ class Register extends CI_Controller
     {
         $this->load->view('register');
     }
+    public function registerUser()
+    {
+        $insert =  $this->user_model->insert(array(
+            "firstName" => $this->input->post("firstName"),
+            "lastName" =>  $this->input->post("lastName"),
+            "email" => $this->input->post("email"),
+            "password" =>  $this->input->post("password"),
+
+        ));
+        if ($insert) {
+            redirect(base_url('register?status=true'));
+        } else {
+            redirect(base_url('register?status=false'));
+        }
+    }
 }

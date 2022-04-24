@@ -34,7 +34,7 @@ class Book_model extends CI_Model
         if ($err) {
             return "cURL Error #:" . $err;
         } else {
-            return $books->result;
+            return $response;
         }
     }
 }

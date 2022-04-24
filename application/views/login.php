@@ -12,7 +12,7 @@
                 <div class="col-lg-12 bg-light">
                     <div class="login_form_inner">
                         <h3>Giriş Yap</h3>
-                        <form class="row login_form" action="<?php echo base_url("/Login/checkUser") ?>" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="row login_form" action="<?php echo base_url("/Login/checkUser") ?>" method="post" id="contactForm">
                             <div class="col-md-12 form-group">
                                 <input type="email" required class="form-control" id="name" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
                             </div>

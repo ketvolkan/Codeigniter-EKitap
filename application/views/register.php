@@ -12,18 +12,18 @@
                 <div class="col-lg-12 bg-light">
                     <div class="login_form_inner">
                         <h3>Kayıt Ol</h3>
-                        <form class="row login_form" action="<?php echo base_url("/Login/checkUser") ?>" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="row login_form" action="<?php echo base_url("/Register/registerUser") ?>" method="post" id="contactForm">
                             <div class="col-md-12 form-group">
-                                <input type="text" required class="form-control" id="name" name="firstName" placeholder="Ad" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ad'">
+                                <input type="text" class="form-control" id="name" name="firstName" placeholder="Ad" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ad'" required>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" required class="form-control" id="name" name="lastName" placeholder="Soyad" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Soyad'">
+                                <input type="text" class="form-control" id="name" name="lastName" placeholder="Soyad" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Soyad'" required>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="email" required class="form-control" id="name" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+                                <input type="email" class="form-control" id="name" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" required>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="password" required class="form-control" id="password" name="password" placeholder="Şifre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şifre'">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Şifre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şifre'" required>
                             </div>
                             <div class="col-md-12 ">
                                 <input type="checkbox" onclick="showHidePassword()">Şifreyi Göster
@@ -49,7 +49,17 @@
                                         <div class="row justify-content-center">
                                             <div class="col-sm-10">
                                                 <div class="alert alert-danger" role="alert">
-                                                    <strong>Hata!</strong> Şifre Yada Email Hatalı.
+                                                    <strong>Hata!</strong> Kayıt Oluşturulamadı.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <div class="row justify-content-center">
+                                            <div class="col-sm-10">
+                                                <div class="alert alert-success" role="alert">
+                                                    <strong>Başarılı!</strong> Kayıt Oluşturuldu.
                                                 </div>
                                             </div>
                                         </div>
