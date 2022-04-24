@@ -12,9 +12,9 @@ class Ekitap extends CI_Controller
     public function index()
     {
         //print_r($this->book_model->getAll());
-        $books = $this->book_model->getAll();
+        //$books = $this->book_model->getAll();
         $viewData = [
-            "books" => $books
+            //"books" => $books
         ];
         $this->load->view('ekitap', $viewData);
     }

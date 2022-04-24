@@ -4,8 +4,10 @@
     <?php $this->load->view("includes/header"); ?>
 </head>
 
-<body>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero laborum sunt dolorum neque quidem quam, omnis tempore eligendi ducimus similique voluptates veritatis nulla, ex ea est accusamus eum numquam suscipit.</p>
+<body style="background-image: url(<?php echo base_url("assets/") ?>img/banner-bg.jpg); background-repeat: no-repeat;">
+    <?php $this->load->view("includes/navbar"); ?>
+
+    <?php $this->load->view("includes/book_list"); ?>
     <?php $this->load->view("includes/footer"); ?>
 </body>
 
