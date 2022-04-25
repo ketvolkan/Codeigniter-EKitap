@@ -14,10 +14,6 @@ class User_Model extends CI_Model
     {
         return $this->db->get($this->tableName)->result();
     }
-    public function getById($id)
-    {
-        return $this->db->where("id", $id)->get($this->tableName)->result();
-    }
     public function getByEmailAndPassword($email, $password)
     {
         $array = array('email' => $email, 'password' => $password);
@@ -35,7 +31,6 @@ class User_Model extends CI_Model
 
     public function update($id, $data = array())
     {
-
         return $this->db->where("id", $id)->update($this->tableName, $data);
     }
 }
