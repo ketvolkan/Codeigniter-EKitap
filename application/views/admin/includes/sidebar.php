@@ -7,7 +7,7 @@
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
-                <a href="#" class="d-block">Kullanıcı Adı</a>
+                <a href="<?php echo base_url("Admin/Admin") ?>" class="d-block"><?php echo $this->session->userdata("AdminUserFirstName") . " " . $this->session->userdata("AdminUserLastName") ?></a>
             </div>
         </div>
         <nav class="mt-2">

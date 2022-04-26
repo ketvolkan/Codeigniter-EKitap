@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php $this->load->view("admin/includes/header.php"); ?>
-<?php $this->load->view("admin/includes/navbar.php") ?>
-<?php $this->load->view("admin/includes/sidebar.php") ?>
+<?php $this->load->view("admin/includes/header"); ?>
+<?php $this->load->view("admin/includes/navbar") ?>
+<?php $this->load->view("admin/includes/sidebar") ?>
 
 <div class="content-wrapper">
 
@@ -20,4 +20,4 @@
 
 </div>
 
-<?php $this->load->view("admin/includes/footer.php"); ?>
+<?php $this->load->view("admin/includes/footer"); ?>

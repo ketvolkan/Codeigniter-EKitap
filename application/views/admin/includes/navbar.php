@@ -5,5 +5,8 @@
 		</li>
 	</ul>
 	<ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+			<a class="nav-link" style="color:red" href="<?php echo base_url("Admin/Login/LogOut") ?>" role="button">Çıkış Yap</a>
+		</li>
 	</ul>
 </nav>

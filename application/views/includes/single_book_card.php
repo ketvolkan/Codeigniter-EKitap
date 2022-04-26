@@ -1,5 +1,6 @@
 <a href="<?php echo base_url("/BookDetail?id=1") ?>">
-    <div class="col-lg-3 col-md-6">
+
+    <div class="col-lg-3 col-md-6" style="background-color: white;">
         <div class="single-product">
             <img class="img-fluid" src="https://i.dr.com.tr/cache/500x400-0/originals/0001902535001-1.jpg" alt="">
             <div class="product-details">
@@ -17,5 +18,6 @@
                 </div>
             </div>
         </div>
+
     </div>
 </a>

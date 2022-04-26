@@ -7,6 +7,7 @@ class Panel extends CI_Controller
     {
         parent::__construct();
         array_push($this->viewFolder, "Panel");
+        if ($this->session->userdata("AdminUserId") == null) redirect(base_url("Admin/Login"));
     }
 
     public function index()

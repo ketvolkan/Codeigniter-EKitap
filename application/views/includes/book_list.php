@@ -1,4 +1,4 @@
-<div class="single-product-slider" style="background-color: white;">
+<div class="single-product-slider">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
